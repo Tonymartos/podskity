@@ -7,7 +7,7 @@ img{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
-    row-gap: 15px;
+    row-gap: 2%;
 }
 
 .item-podcast{
@@ -20,6 +20,8 @@ img{
     box-shadow: 2px 3px 12px 0px #C8C8C8;
     border-radius: 3px;
     width: 100%;
+    height: 100%;
+    margin-top: 36%;
 }
 
 .item-content{

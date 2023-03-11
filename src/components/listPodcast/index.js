@@ -9,7 +9,7 @@ const renderItemPodcast = (items) => {
                         <div className='item-content'>
                             <span><img src={item['im:image'][0].label}/></span>
                             <span>{item['im:artist'].label}</span>
-                            <span>{item['im:name'].label}</span>
+                            <span>Author: {item['im:name'].label}</span>
                         </div>
                     </div>
                 </div>
