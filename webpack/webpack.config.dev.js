@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 const path = require('path'); //to access built-in plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 

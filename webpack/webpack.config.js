@@ -1,3 +1,4 @@
-module.exports = (env) => {
-  return require(`./webpack.config.${env}.js`)
+/* eslint-disable no-undef */
+export default (env) => {
+  return require(`./webpack.config.${env}.js`);
 }
