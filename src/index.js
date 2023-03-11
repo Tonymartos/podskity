@@ -1,9 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import '../assets/index.scss';
+import { createRoot } from "react-dom/client";
+import {
+    createBrowserRouter,
+    RouterProvider
+  } from "react-router-dom";
 import App from './App';
+import '../assets/index.scss';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <App />
+const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <App />
+      ),
+    }
+]);
+  
+createRoot(document.getElementById("root")).render(
+    <RouterProvider router={router} />
 );

@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "server-dev": "cd ./webpack && webpack-dev-server --config webpack.config.dev.js",
-    "prepare": "husky install"
+    "server-dev": "npx eslint . && cd ./webpack && webpack-dev-server --config webpack.config.dev.js",
+    "prepare": "husky install",
+    "lint": "npx eslint ."
   },
   "eslintConfig": {
     "extends": [
