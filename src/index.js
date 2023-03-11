@@ -4,18 +4,23 @@ import {
     createBrowserRouter,
     RouterProvider
   } from "react-router-dom";
-import App from './App';
+import Podcast from './sections/podcast/podcast';
 import '../assets/index.scss';
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: (
-        <App />
+        <Podcast />
       ),
     }
 ]);
   
 createRoot(document.getElementById("root")).render(
-    <RouterProvider router={router} />
+    <div>
+      <div className='header-app'>
+        <h3>Podskity</h3>
+      </div>
+      <RouterProvider router={router} />
+    </div>
 );
