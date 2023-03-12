@@ -8,7 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body, #app, #app>div {
+html, body, #root, #app>div {
   height: 100%;
 }
 
@@ -17,6 +17,13 @@ code {
     monospace;
 }
 
+.app-sections{
+  height: 100%;
+}
+
 @import url(./headerApp.scss);
 @import url(./App.scss);
 @import url(./itemPodcast.scss);
+
+/* Styles components */
+@import url(./stylesComponents/filterComponent/filterComponent.scss)
