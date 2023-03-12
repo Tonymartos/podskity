@@ -21,6 +21,8 @@ createRoot(document.getElementById("root")).render(
       <div className='header-app'>
         <h3>Podskity</h3>
       </div>
-      <RouterProvider router={router} />
+      <div className='app-sections'>
+        <RouterProvider router={router} />
+      </div>
     </div>
 );
