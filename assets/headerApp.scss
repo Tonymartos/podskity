@@ -1,5 +1,14 @@
 .header-app{
-    color: #17A1C8;
     border-bottom: 1px solid black;
     margin-bottom: 5%;
+}
+
+.header-app a{
+    text-decoration: none;
+    color: #0074AA;
+}
+
+.header-app__title{
+    width: 10%;
+    font-size: 25px;
 }
