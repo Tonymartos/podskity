@@ -27,11 +27,10 @@ const Podcast = () => {
 }
 
   const filterPodcastRender = (filter) => {
-	console.log(filter.target.value)
-	const filterWords = filter.target.value
+	const filterWords = filter.target.value.toUpperCase()
 
 	if(filterWords !== ''){
-		const dataFilter = dataPodcasts.filter((element) => element['im:name'].label.includes(filterWords))
+		const dataFilter = dataPodcasts.filter((element) => element['im:name'].label.toUpperCase().includes(filterWords))
 		const countDataFilter = dataFilter.length
 		setDataFilter(dataFilter)
 		setCountPods(countDataFilter)
