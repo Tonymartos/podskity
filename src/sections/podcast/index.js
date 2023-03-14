@@ -28,9 +28,21 @@ const Podcast = () => {
 
   const filterPodcastRender = (filter) => {
 	const filterWords = filter.target.value.toUpperCase()
+	const filterArray = (value, array) => {
+		if (!value) return array
+		const lowSearch = value.toLowerCase()
+		return array.filter((item) => {
+		return Object.values({
+			artist:item['im:artist'], name:item['im:name']
+			}).some((value) => {
+				const { label } = value
+				return String(label).toLowerCase().includes(lowSearch)
+			})
+		})
+	}
 
 	if(filterWords !== ''){
-		const dataFilter = dataPodcasts.filter((element) => element['im:name'].label.toUpperCase().includes(filterWords))
+		const dataFilter = filterArray(filterWords, dataPodcasts)
 		const countDataFilter = dataFilter.length
 		setDataFilter(dataFilter)
 		setCountPods(countDataFilter)
