@@ -1,0 +1,64 @@
+.episodes__table-header{
+    text-align: left;
+}
+
+tr th:nth-child(3) {
+    text-align: center;
+}
+
+tr td:nth-child(3) {
+    text-align: center;
+}
+  
+table {
+    display: grid;
+    border-collapse: collapse;
+    padding: 1%;
+    min-width: 100%;
+    grid-template-columns: minmax(60%, 1fr) minmax(20%, 1fr) minmax(10%, 1fr);
+  }
+
+  thead{
+    border-bottom: 1px solid black;
+  }
+  
+  thead,
+  tbody,
+  tr {
+    display: contents;
+  }
+  
+  th,
+  td {
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  th {
+    background-color: #FFF;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  th:last-child {
+    border: 0;
+  }
+  
+  td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #808080;
+  }
+
+  td > a {
+    text-decoration: none;
+    color: #0074AA;
+
+  }
+  
+  tr:nth-child(even) td {
+    background: #F9F9F9;
+  }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import { createRoot } from "react-dom/client"
 import {
     createBrowserRouter,
@@ -7,6 +7,7 @@ import {
 import Header from './sections/header'
 import Podcast from './sections/podcast'
 import PodcastItem from './sections/podcastItem'
+import Episode from './sections/episode'
 import '../assets/index.scss'
 
 const router = createBrowserRouter([
@@ -23,6 +24,12 @@ const router = createBrowserRouter([
       element: (
         <PodcastItem />
       ),
+    },
+    {
+      path: 'episode/:id',
+      element:(
+        <Episode />
+      )
     }
   ]}
 ]);
