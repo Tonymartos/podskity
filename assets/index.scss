@@ -1,0 +1,33 @@
+body {
+  width: 70%;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root, #app>div {
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app-sections{
+  height: 100%;
+}
+
+@import url(./headerApp.scss);
+@import url(./App.scss);
+@import url(./itemPodcast.scss);
+@import url(./podcastDetails.scss);
+@import url(./podcastArtist.scss);
+@import url(./episodes.scss);
+@import url(./episodePlayer.scss);
+
+/* Styles components */
+@import url(./stylesComponents/filterComponent/filterComponent.scss)

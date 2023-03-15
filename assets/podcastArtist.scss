@@ -1,0 +1,24 @@
+.podcast-artist__image img{
+    width: 100%
+}
+
+.podcast-artist__image{
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+}
+
+.podcast-artist__name{
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.podcast-artist__description{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
