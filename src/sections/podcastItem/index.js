@@ -144,7 +144,7 @@ const PodcastItem = () => {
                         title: getTitleEpisode,
                         date: getDateEpisode,
                         duration: getDurationEpisode,
-                        summary: getSummary.replaceAll('<p>',''),
+                        summary: getSummary.replaceAll(/(<([^>]+)>)/ig, ''),
                         audio: audioPodcast
                     }
 
