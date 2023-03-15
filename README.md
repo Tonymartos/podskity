@@ -13,6 +13,7 @@ Tecnologies used for this project:
 
 - Run Webpack server dev, you need to use 'npm run server-dev'
 
+`npm run server-dev`
 
 ### <b>'PRECAUTION'</b> -> Access Demo Server CORS
 

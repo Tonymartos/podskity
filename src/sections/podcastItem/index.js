@@ -65,11 +65,17 @@ const PodcastItem = () => {
 
 
     useEffect(() => {
-        sessionStorage.setItem('processActive', 'inactive')
-        fetchApiDetails()
+        const getLocalStorage = localStorage.getItem(podId)
+
+        if(getLocalStorage){
+            setDetails(JSON.parse(getLocalStorage))
+        }else{
+            fetchApiDetails()
+        }
     }, [])
 
     useEffect(() => {
+        
         const getIndexDetails = details[0]
 
         if(getIndexDetails){
@@ -93,9 +99,9 @@ const PodcastItem = () => {
         try{
             const fetchDetails = await fetch(`https://cors-anywhere.herokuapp.com/https://itunes.apple.com/lookup?id=${podId}`).then((res) => {return res.json()})
             const getDetails = fetchDetails.results
-
+            const idPod = getDetails[0].trackId.toString()
+            localStorage.setItem(idPod, JSON.stringify(getDetails))
             setDetails(getDetails)
-    
         }catch(err){console.log(err)}
     }
 
@@ -125,6 +131,7 @@ const PodcastItem = () => {
             }
 
             if(tag === 'item'){
+
                 let episodesList = []
 
                 const dataXML = requestXML.responseXML
@@ -153,7 +160,7 @@ const PodcastItem = () => {
                     episodesList.push(episode)
                 })
 
-
+                
                 setCountEpisodes(episodesList.length - 1)
                 setEpisodes(episodesList)
             }
