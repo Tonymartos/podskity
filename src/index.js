@@ -7,7 +7,7 @@ import {
 import Header from './sections/header'
 import Podcast from './sections/podcast'
 import PodcastItem from './sections/podcastItem'
-import Episode from './sections/episode'
+import EpisodeView from './sections/episodeView'
 import '../assets/index.scss'
 
 const router = createBrowserRouter([
@@ -20,16 +20,16 @@ const router = createBrowserRouter([
       ),
     },
     {
-      path: 'podcast/:id',
+      path: '/podcast/:id',
       element: (
         <PodcastItem />
       ),
     },
     {
-      path: 'episode/:id',
-      element:(
-        <Episode />
-      )
+      path: 'podcast/:id/episode/:id',
+      element: (
+        <EpisodeView />
+      ),
     }
   ]}
 ]);
