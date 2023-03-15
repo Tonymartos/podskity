@@ -8,12 +8,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
+    publicPath: '/'
   },
   entry: {
     main: "../src/index.js",
   },
   devServer: {
     port: 9000,
+    historyApiFallback: true
   },
   module: {
     rules: [
