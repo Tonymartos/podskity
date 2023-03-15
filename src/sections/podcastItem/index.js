@@ -65,6 +65,7 @@ const PodcastItem = () => {
 
 
     useEffect(() => {
+        sessionStorage.setItem('processActive', 'inactive')
         fetchApiDetails()
     }, [])
 
