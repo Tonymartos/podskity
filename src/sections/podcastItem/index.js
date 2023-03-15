@@ -65,6 +65,7 @@ const PodcastItem = () => {
 
 
     useEffect(() => {
+        sessionStorage.setItem('processActive', 'inactive')
         fetchApiDetails()
     }, [])
 
@@ -73,6 +74,7 @@ const PodcastItem = () => {
 
         if(getIndexDetails){
             const objectArtist = {
+                idPod: getIndexDetails.trackId,
                 imagePod: getIndexDetails.artworkUrl600,
                 nameArtist: getIndexDetails.artistName,
                 namePodcast: getIndexDetails.trackName

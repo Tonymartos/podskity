@@ -1,6 +1,9 @@
 .header-app{
     border-bottom: 1px solid black;
     margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-app a{
@@ -11,4 +14,21 @@
 .header-app__title{
     width: 10%;
     font-size: 25px;
+}
+
+.header-app__icon-notification{
+    width: 3%;
+    height: 30px;
+}
+
+.header-app__icon-notification svg{
+    fill: #67daff;
+    animation: filter-animation 2s infinite; 
+}
+  
+@keyframes filter-animation {
+    0% {fill: #3391CE; }
+    33% { fill: #f96526; }
+    66% { fill: #e2df2e; }
+    100% { fill: #3391CE;  }
 }
